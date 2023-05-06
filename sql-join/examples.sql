@@ -56,3 +56,20 @@ use platziblog;
  on u.id = p.user_id
  where p.user_id is NULL;
  
+ AVG --Calcula el promedio
+COUNT --Cuenta los registros de un campo
+SUM --Suma los valores de un campo
+MAX --Devuelve el maximo de un campo
+MIN --Devuelve el mínimo de un campo
+YEAR --
+MONTHNAME --
+
+GROUP BY -- agrupar por
+ORDER BY -- ordenar por
+
+SELECT MONTHNAME(fecha_publicacion) AS post_month, estatus, COUNT(*) AS post_quantity
+FROM post
+GROUP BY estatus, post_month
+HAVING post_quantity > 2
+ORDER BY post_month
+;

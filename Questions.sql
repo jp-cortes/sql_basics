@@ -55,14 +55,14 @@ GROUP BY u.id
 ORDER BY cant_posts DESC
 LIMIT 1;
 
--- wich categories write every user?
+-- which categories write every user?
 SELECT u.nickname, COUNT(*) AS cant_posts,  GROUP_CONCAT(name_category)
 FROM    users AS u
     INNER JOIN posts AS p ON u.id = p.user_id
     INNER JOIN categories AS c ON c.id = p.categoria_id
 GROUP BY u.id;
 
--- Whict user didn't write a post yet?
+-- Which user didn't write a post yet?
 SELECT	*
 FROM	users 
 	LEFT JOIN posts on users.id = posts.user_id

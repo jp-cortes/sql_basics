@@ -67,7 +67,7 @@ MONTHNAME --
 GROUP BY -- agrupar por
 ORDER BY -- ordenar por
 
-SELECT MONTHNAME(fecha_publicacion) AS post_month, estatus, COUNT(*) AS post_quantity
+SELECT MONTHNAME(fecha_publication) AS post_month, estatus, COUNT(*) AS post_quantity
 FROM post
 GROUP BY estatus, post_month
 HAVING post_quantity > 2

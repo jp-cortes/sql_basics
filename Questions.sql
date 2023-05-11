@@ -59,7 +59,7 @@ LIMIT 1;
 SELECT u.nickname, COUNT(*) AS cant_posts,  GROUP_CONCAT(name_category)
 FROM    users AS u
     INNER JOIN posts AS p ON u.id = p.user_id
-    INNER JOIN categories AS c ON c.id = p.categoria_id
+    INNER JOIN categories AS c ON c.id = p.category_id
 GROUP BY u.id;
 
 -- Which user didn't write a post yet?

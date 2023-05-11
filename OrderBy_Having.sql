@@ -9,15 +9,15 @@ ORDER BY fecha_publicacion DESC;
 
 SELECT	*
 FROM		posts
-ORDER BY titulo ASC;
+ORDER BY title ASC;
 
 SELECT	*
 FROM		posts
-ORDER BY titulo DESC;
+ORDER BY title DESC;
 
 SELECT	*
 FROM		posts
-ORDER BY usuario_id ASC
+ORDER BY user_id ASC
 LIMIT 5;
 
 SELECT	MONTHNAME(fecha_publicacion) AS post_month, estatus, COUNT(*) AS post_quantity
